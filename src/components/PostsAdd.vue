@@ -10,7 +10,7 @@ const form = reactive({
 const handleSubmit = async () => {
   const newPost = {
     title: form.title,
-    description: form.title,
+    description: form.description,
   }
   try {
     const response = await axios.post('http://localhost:8080/posts', newPost)
