@@ -17,6 +17,7 @@ onMounted(async () => {
   }
 })
 </script>
+
 <template>
   <div class="center-container">
     <h1>All Post</h1>
@@ -25,12 +26,18 @@ onMounted(async () => {
     <br />
     <br />
     <table id="posts">
-      <tr>
-        <th>S.N</th>
-        <th>Title</th>
-        <th>Action</th>
-      </tr>
-      <Post v-for="post in state.posts" :key="post.id" :post="post" />
+      <thead>
+        <tr>
+          <th>S.N</th>
+          <th>Title</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="post in state.posts" :key="post.id">
+          <Post :post="post" />
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>

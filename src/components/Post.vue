@@ -1,6 +1,6 @@
 <script setup>
 import axios from 'axios'
-import { defineProps } from 'vue'
+//import { defineProps } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -22,13 +22,11 @@ const deletePost = async (postId) => {
 }
 </script>
 <template>
-  <tr>
-    <td>{{ post.id }}</td>
-    <td>{{ post.title }}</td>
-    <td>
-      <RouterLink :to="`/posts/${post.id}`" class="btn btn-green">O</RouterLink>
-      <RouterLink :to="`/posts/edit/${post.id}`" class="btn btn-blue">/</RouterLink>
-      <button @click="deletePost(post.id)" class="btn btn-red">X</button>
-    </td>
-  </tr>
+  <td>{{ post.id }}</td>
+  <td>{{ post.title }}</td>
+  <td>
+    <RouterLink :to="`/posts/${post.id}`" class="btn btn-green">👁️</RouterLink>
+    <RouterLink :to="`/posts/edit/${post.id}`" class="btn btn-blue">✏️</RouterLink>
+    <button @click="deletePost(post.id)" class="btn btn-red">🗑️</button>
+  </td>
 </template>
