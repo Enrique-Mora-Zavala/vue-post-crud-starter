@@ -1,19 +1,21 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+import Post from '@/components/Post.vue'
+</script>
+
 <template>
-  <h1>All Post</h1>
-  <table id="posts">
-    <tr>
-      <th>S.N</th>
-      <th>Title</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Hello World!</td>
-      <td>
-        <button class="btn btn-green">O</button>
-        <button class="btn btn-blue">/</button>
-        <button class="btn btn-red">X</button>
-      </td>
-    </tr>
-  </table>
+  <div class="center-container">
+    <h1>All Post</h1>
+    <RouterLink :to="`/`" class="btn btn-blue">Go to Home</RouterLink>
+    <br />
+    <br />
+    <table id="posts">
+      <tr>
+        <th>S.N</th>
+        <th>Title</th>
+        <th>Action</th>
+      </tr>
+      <Post />
+    </table>
+  </div>
 </template>
