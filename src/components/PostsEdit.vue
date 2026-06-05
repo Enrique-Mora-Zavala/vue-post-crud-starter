@@ -19,7 +19,7 @@ onMounted(async () => {
     form.title = response.data.title
     form.description = response.data.description
   } catch (error) {
-    console.log('Error fetching post', response)
+    console.error('Error fetching post', error)
   }
 })
 

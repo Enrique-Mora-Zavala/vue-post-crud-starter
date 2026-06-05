@@ -5,7 +5,7 @@ import { RouterLink, useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const props = defineProps({
+defineProps({
   post: Object,
 })
 

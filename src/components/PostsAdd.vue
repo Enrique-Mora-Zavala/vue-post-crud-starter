@@ -13,7 +13,7 @@ const handleSubmit = async () => {
     description: form.description,
   }
   try {
-    const response = await axios.post('http://localhost:8080/posts', newPost)
+    await axios.post('http://localhost:8080/posts', newPost)
     return router.push('/posts')
   } catch (error) {
     console.error('Error on posting data:', error)
